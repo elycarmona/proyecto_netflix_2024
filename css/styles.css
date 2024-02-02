@@ -1,0 +1,250 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*Para que ninguna propiedad que yo añada afecte a la
+							colocacion de los elementos*/
+}
+
+body {
+	background-color: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+	/* 30px arriba y abajo y 0 a los lados*/
+}
+
+header .contenedor {
+	display: flex;
+	/* Flex nos permite alinear elementos*/
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav .activo {
+	color: #FFF;
+}
+
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: white;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../img/caza-fantasmas.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 6.25 auto;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	/*16px*/
+	line-height: 1.75em;
+	/*Espaciado entre lineas*/
+	max-width: 50%;
+	/* anchura maxima*/
+	margin-bottom: 1.25em;
+	/*espacio en la parte inferior*/
+}
+
+.pelicula-principal .boton {
+	background: rgba(0, 0, 0, .50);
+	/* la mitad de opacidad*/
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: white;
+	margin-right: 1.25em;
+	cursor: pointer;
+	/* con esto el cursor se convertira en una mano cuando esté sobre un boton*/
+	transition: .3s ease all;
+	/*transition es para darle movimiento*/
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	/*Cuando pasemos el cursor por encima cambiara*/
+	background: white;
+	color: black;
+}
+
+.pelicula-principal .boton i {
+	/* Los iconos*/
+	margin-right: 1.25em;
+}
+
+
+/* Carrusel Peliculas Recomendadas*/
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	/*Para que alinee los elementos al final*/
+}
+
+.contenedor-titulo-controles h3 {
+	color: white;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background-color: white;
+	height: 5px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: var(--rojo);
+}
+
+.peliculas-recomendadas {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	/*Flexbox */
+	display: flex;
+	/*Display es para el posicionamiento*/
+	align-items: center;
+	position: relative;
+}
+
+
+.peliculas-recomendadas .contenedor-principal #flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal #flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgb(0, 0, 0, 0.30);
+	/* negro con 30% de opacidad*/
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: 0.2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal #flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal #flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+	/* negro con 9 % de opacidad*/
+
+}
+
+.peliculas-recomendadas .contenedor-principal #flecha-izquierda {
+	left: 0px;
+	/*Para que se pegue a la izquierda*/
+}
+
+.peliculas-recomendadas .contenedor-principal #flecha-derecha {
+	right: 0px;
+	/*Para que se pegue a la derecha*/
+}
+
+.peliculas-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+	/* Para que las imagenes se mantengan en linea*/
+}
+
+/*Damos estilo a las peliculas del carusel*/
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+	min-width: 20%;
+	/*se veran en pantaña minimo 5 pelis y ya le dariamos a la flechita*/
+	transition: 0.3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula:hover {
+	transform: scale(1.2); /*Hace que la foto se amplie al poner el ratón encima*/
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+
+/*Pie de pagina*/
+#derechos {
+	color: grey;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+
+/*Hace que nuestra web se adapte a todos los dispositivos*/
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+		/*Para que alinee al centro*/
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+		rel="stylesheet">
+	<title>Elyflix</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">Elyflix</h2>
+
+			<nav>
+				<a href="#" class="activo">Inicio</a>
+				<a href="#">Programas</a>
+				<a href="#">Películas</a>
+				<a href="#">Más Recientes</a>
+				<a href="#">Mi lista</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="pelicula-principal">
+			<div class="contenedor">
+				<h3 class="titulo"> Cazafantasmas: Más allá </h3>
+				<p class="descripcion">
+					Cuando una madre soltera y sus dos hijos se mudan a una nueva ciudad, pronto descubren que tienen
+					una conexión con los Cazafantasmas originales y el legado secreto de su abuelo.
+				</p>
+
+				<!-- Si quisieramos que el boton nos llevara a una URL solo tendriamos que meterlo en una etiqueta <a>-->
+				<!-- <a href="#" target="_blank"> -->
+				<button role="button" class="boton">
+					<i class="fas fa-play"></i>
+					Reproducir
+				</button>
+				<!-- </a> -->
+
+				<button role="button" class="boton">
+					<i class="fas fa-info-circle"></i>
+					Más Información
+				</button>
+
+			</div>
+
+		</div>
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Peliculas Recomendadas</h3>
+				<div class="indicadores"></div>
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda">
+					<i class="fas fa-angle-left"></i>
+				</button>
+
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/action-films/jhon-wick-3.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/action-films/interestellar.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/action-films/ironman.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/action-films/spiderman.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/action-films/valerian.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/anime-series/attack-on-titan.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/anime-series/my-heroa-cademia.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/anime-series/regular-show.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/anime-series/ricky-morty.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/anime-series/tokyo-ghoul.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/series/stranger-things.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/series/breaking-bad.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/series/la-casa-de-papel.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/series/lupin.png" alt="">
+
+							</a>
+						</div>
+
+						<div class="pelicula">
+							<a href="#">
+								<img src="./img/series/peaky-blinders.png" alt="">
+
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha">
+					<i class="fas fa-angle-right"></i>
+				</button>
+			</div>
+		</div>
+
+
+	</main>
+
+	<footer id="derechos">© Elyflix 2024</footer>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
